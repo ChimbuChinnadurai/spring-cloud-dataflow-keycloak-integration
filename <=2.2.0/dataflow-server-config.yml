@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    dataflow:
+      security:
+        authorization:
+          map-oauth-scopes: true
+security:
+  oauth2:
+    client:
+      client-id: dataflow
+      client-secret: 236573ad-ab1e-897d-b160-832a1a437g30e3
+      access-token-uri: http://localhost:8844/auth/realms/dataflow/protocol/openid-connect/token
+      user-authorization-uri: http://localhost:8844/auth/realms/dataflow/protocol/openid-connect/auth
+    resource:
+      user-info-uri: http://localhost:8844/auth/realms/dataflow/protocol/openid-connect/userinfo
+      token-info-uri: http://localhost:8844/auth/realms/dataflow/protocol/openid-connect/token/introspect
